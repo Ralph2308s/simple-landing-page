@@ -1,132 +1,129 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: white;
-    background-color: black;
-  }
-  
-  .container {
-    max-width: 90rem;
-    margin: 2rem auto;
-    padding: 0px 2rem;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-  }
-  .logo img {
+html {
+    color: #fff;
+    background: #000;
+    font: 62.5% Georgia, "Times New Roman", Times, serif;
+}
+
+header {
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
     width: 70px;
     height: 70px;
-    border-radius: 41px;
-    outline: 4px solid red;
-  }
-  nav {
+    border: 3px solid #ff0000;
+    border-radius: 50%;
+}
+
+header .nav {
+    display: flex;
+    font-size: 3em;
+    justify-content: space-between;
+}
+
+header .nav a {
+    color: #551a8b;
+    font: 24px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+header .nav a.active,
+header .nav a:hover {
+    color: #ff0000;
+}
+
+header .login,
+.more {
+    color: #fff;
+    font: 32px Arial;
+    font-weight: bold;
+    background: linear-gradient(to right, #c31432, #892211);
+    padding: 9.6px 16px;
+    border-radius: 10px;
+}
+
+header .login:hover,
+.more:hover {
+    background: #fff;
+    color: #ff0000;
+    padding: 8.6px 15px;
+    border: 1px solid #ff0000;
+}
+
+.content {
+    padding: 0 32px;
+    max-width: 1205px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 3rem;
-    align-items: center;
-  }
-  
-  .items {
+}
+
+.content p:first-child {
+    color: #ff0000;
+    margin-top: 40px;
+}
+
+.content .info {
+    width: 40%;
+}
+
+.content .info p {
+    font-size: 1.44em;
+}
+
+.content .info h1 {
+    font-size: 4.8em;
+    margin: 0;
+}
+
+.content .view {
     display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  .items a:link {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .items a:hover {
-    color: red;
-  }
-  
-  .active {
-    color: red !important;
-  }
-  
-  button {
-    font-size: 2rem;
-    padding: 0.6rem 1rem;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(to right, #c31432, #892211);
-    border-radius: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    cursor: pointer;
-    border: none;
-  }
-  
-  button:hover {
-    background: white;
-    outline: 1px solid red;
-    color: red;
-    border: none;
-  }
-  
-  .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .info {
-    display: flex;
-    flex-direction: column;
-  }
-  .short-info {
-    color: red;
-    font-size: 1rem;
-    margin-bottom: 0.9rem;
-  }
-  
-  .hero-heading {
-    font-size: 3rem;
-    margin-bottom: 0.3rem;
-  }
-  .hero-sub-heading {
-    font-size: 0.9rem;
-    opacity: 0.7;
-  }
-  
-  .users {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0px;
-  }
-  .user {
+}
+
+.content .view p {
+    margin: 3px 0 0 2px;
+}
+
+.content .view img {
     width: 20px;
     height: 20px;
+    border: 2px solid #ff0000;
     border-radius: 50%;
-    border: 2px solid red;
-  }
-  .learn-more {
-    align-self: start;
-    margin-top: 3rem;
-  }
-  
-  /* media queries */
-  
-  @media only screen and (max-width: 800px) {
-    .items {
-      display: none;
+}
+
+.more {
+    margin-top: 60px;
+    border: none;
+    cursor: pointer;
+}
+
+.content > p {
+    width: 55%;
+}
+
+.content > p img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    header .nav {
+        display: none;
     }
-  
-    .row {
-      grid-template-columns: 1fr;
+    .content {
+        padding: 0 32px;
+        max-width: 1205px;
+        margin: auto;
+        display: block;
     }
-    .learn-more {
-      align-self: start;
-      margin: 1rem 0px;
+    .content .info {
+        width: 100%;
     }
-  }
-  
+    .content > p {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
