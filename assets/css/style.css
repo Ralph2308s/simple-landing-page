@@ -73,6 +73,7 @@ header .login:hover,
 
 .content .info p {
     font-size: 1.44em;
+    margin-bottom: 1rem;
 }
 
 .content .info h1 {
@@ -96,7 +97,7 @@ header .login:hover,
 }
 
 .more {
-    margin-top: 60px;
+    margin-top: 12px;
     border: none;
     cursor: pointer;
 }
